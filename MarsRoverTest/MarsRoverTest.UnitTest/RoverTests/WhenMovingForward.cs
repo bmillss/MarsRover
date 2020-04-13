@@ -20,6 +20,39 @@ namespace MarsRoverTest.UnitTest.RoverTests
             //assert
             Assert.AreEqual(1, rover.Y);
         }
+        [TestMethod]
+        public void AndFacingSouthThenYDecreasesByOne()
+        {
+            //arrange 
+            var rover = new Rover();
+            rover.Direction = Direction.South;
+            //act
+            rover.MoveForward();
+            //assert
+            Assert.AreEqual(-1, rover.Y);
+        }
+        [TestMethod]
+        public void AndFacingEastThenXIncrementsByOne()
+        {
+            //arrange 
+            var rover = new Rover();
+            rover.Direction = Direction.East;
+            //act
+            rover.MoveForward();
+            //assert
+            Assert.AreEqual(1, rover.X);
+        }
+        [TestMethod]
+        public void AndFacingWestThenXDecreasesByOne()
+        {
+            //arrange 
+            var rover = new Rover();
+            rover.Direction = Direction.West;
+            //act
+            rover.MoveForward();
+            //assert
+            Assert.AreEqual(-1, rover.X);
+        }
 
     }
 }

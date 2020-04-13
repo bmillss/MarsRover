@@ -21,13 +21,26 @@ namespace MarsRover
             Direction = Direction.North;
         }
         public void MoveForward()
-        { 
-            Y = Y + 1;
+        {
+            if (Direction == Direction.North)
+            {
+                Y = Y + 1;
+            }
+            else if (Direction == Direction.South)
+            {
+                Y = Y - 1;
+            }
+           else if (Direction == Direction.East)
+            {
+                X = X + 1;
+            }
+            else if (Direction == Direction.West)
+            {
+                X = X - 1;
+            }
         }
+        // Write moving forward for each direction south = y -1; east x +1; west x-1;
 
-        //TODO: Bonus points
-        // Research on how to write a default constructor
-        //that would explicitly set X, Y, and Direction
     }
 }
 

@@ -20,6 +20,10 @@ namespace MarsRover
             Y = 0;
             Direction = Direction.North;
         }
+        public void MoveForward()
+        { 
+            Y = Y + 1;
+        }
 
         //TODO: Bonus points
         // Research on how to write a default constructor

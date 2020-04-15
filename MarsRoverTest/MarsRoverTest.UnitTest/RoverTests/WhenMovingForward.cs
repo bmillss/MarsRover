@@ -13,8 +13,7 @@ namespace MarsRoverTest.UnitTest.RoverTests
         public void AndFacingNorthThenYIncrementsByOne()
         {
             //arrange 
-            var rover = new Rover();
-            rover.Direction = Direction.North;
+            var rover = new Rover { Direction = Direction.North };
             //act
             rover.MoveForward();
             //assert
@@ -24,8 +23,7 @@ namespace MarsRoverTest.UnitTest.RoverTests
         public void AndFacingSouthThenYDecreasesByOne()
         {
             //arrange 
-            var rover = new Rover();
-            rover.Direction = Direction.South;
+            var rover = new Rover { Direction = Direction.South };
             //act
             rover.MoveForward();
             //assert
@@ -35,8 +33,7 @@ namespace MarsRoverTest.UnitTest.RoverTests
         public void AndFacingEastThenXIncrementsByOne()
         {
             //arrange 
-            var rover = new Rover();
-            rover.Direction = Direction.East;
+            var rover = new Rover { Direction = Direction.East };
             //act
             rover.MoveForward();
             //assert
@@ -46,8 +43,7 @@ namespace MarsRoverTest.UnitTest.RoverTests
         public void AndFacingWestThenXDecreasesByOne()
         {
             //arrange 
-            var rover = new Rover();
-            rover.Direction = Direction.West;
+            var rover = new Rover { Direction = Direction.West };
             //act
             rover.MoveForward();
             //assert

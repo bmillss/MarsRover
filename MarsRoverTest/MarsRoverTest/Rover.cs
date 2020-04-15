@@ -12,7 +12,6 @@ namespace MarsRover
 
         public int Y { get; set; }
 
-        
         // Default constructor is a constructor that takes 0 parameters
         public Rover()
         {
@@ -30,7 +29,7 @@ namespace MarsRover
             {
                 Y = Y - 1;
             }
-           else if (Direction == Direction.East)
+            else if (Direction == Direction.East)
             {
                 X = X + 1;
             }
@@ -40,7 +39,6 @@ namespace MarsRover
             }
         }
         // Write moving forward for each direction south = y -1; east x +1; west x-1;
-
     }
 }
 

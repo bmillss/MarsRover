@@ -12,7 +12,6 @@ namespace MarsRover
 
         public int Y { get; set; }
 
-        
         // Default constructor is a constructor that takes 0 parameters
         public Rover()
         {
@@ -20,10 +19,26 @@ namespace MarsRover
             Y = 0;
             Direction = Direction.North;
         }
-
-        //TODO: Bonus points
-        // Research on how to write a default constructor
-        //that would explicitly set X, Y, and Direction
+        public void MoveForward()
+        {
+            if (Direction == Direction.North)
+            {
+                Y = Y + 1;
+            }
+            else if (Direction == Direction.South)
+            {
+                Y = Y - 1;
+            }
+            else if (Direction == Direction.East)
+            {
+                X = X + 1;
+            }
+            else if (Direction == Direction.West)
+            {
+                X = X - 1;
+            }
+        }
+        // Write moving forward for each direction south = y -1; east x +1; west x-1;
     }
 }
 

@@ -57,6 +57,11 @@ namespace MarsRover
                 X = X + 1;
             }
         }
+
+        public void TurnRight()
+        {
+            Direction = Direction.East;
+        }
     }
 }
 

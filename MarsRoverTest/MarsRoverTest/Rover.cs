@@ -68,6 +68,10 @@ namespace MarsRover
             {
                 Direction = Direction.South;
             }
+            else if (Direction == Direction.South)
+            {
+                Direction = Direction.West;
+            }
         }
 
     }

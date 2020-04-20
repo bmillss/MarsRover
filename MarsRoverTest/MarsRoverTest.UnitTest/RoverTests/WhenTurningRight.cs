@@ -10,7 +10,7 @@ namespace MarsRoverTest.UnitTest.RoverTests
     public class WhenTurningRight
     {
         [TestMethod]
-        public void AndFacingNorth()
+        public void AndFacingNorthThenRoverFacesEast()
         {
             //arrange
             var rover = new Rover { Direction = Direction.North };
@@ -18,6 +18,17 @@ namespace MarsRoverTest.UnitTest.RoverTests
             rover.TurnRight();
             //assert
             Assert.AreEqual(Direction.East, rover.Direction);
+        }
+
+        [TestMethod]
+        public void AndFacingEastThenRoverFacesSouth()
+        {
+            //arrange
+            var rover = new Rover { Direction = Direction.East };
+            //act
+            rover.TurnRight();
+            //assert
+            Assert.AreEqual(Direction.South, rover.Direction);
         }
 
 

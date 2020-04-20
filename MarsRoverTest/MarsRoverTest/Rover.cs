@@ -60,8 +60,16 @@ namespace MarsRover
 
         public void TurnRight()
         {
-            Direction = Direction.East;
+            if( Direction == Direction.North)
+            {
+                Direction = Direction.East;
+            }
+            else if (Direction == Direction.East)
+            {
+                Direction = Direction.South;
+            }
         }
+
     }
 }
 

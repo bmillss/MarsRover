@@ -42,6 +42,17 @@ namespace MarsRoverTest.UnitTest.RoverTests
             Assert.AreEqual(Direction.West, rover.Direction);
         }
 
+        [TestMethod]
+        public void AndFacingWestThenRoverFacesNorth()
+        {
+            //arrange
+            var rover = new Rover { Direction = Direction.West };
+            //act
+            rover.TurnRight();
+            //assert
+            Assert.AreEqual(Direction.North, rover.Direction);
+        }
+
     }
 
     /*

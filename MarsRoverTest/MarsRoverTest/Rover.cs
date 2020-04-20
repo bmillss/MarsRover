@@ -12,7 +12,6 @@ namespace MarsRover
 
         public int Y { get; set; }
 
-        
         // Default constructor is a constructor that takes 0 parameters
         public Rover()
         {

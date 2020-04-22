@@ -53,21 +53,6 @@ namespace MarsRoverTest.UnitTest.RoverTests
             Assert.AreEqual(Direction.North, rover.Direction);
         }
 
-        [DataTestMethod]
-        [DataRow(DisplayName="AndFacingNorthThenTheRoverFacesEast")]
-        [DataRow(DisplayName ="AndFacingEastThenTheRoverFacesSouth")]
-        [DataRow(DisplayName="AndFacingSouthThenRoverFacesWest")]
-        [DataRow(DisplayName ="AndFacingWestThenRoverFacesNorth")]
-        public void AndRoverFacesInitialDirectionThenRoverFacesFinalDirection(Direction initialDirection, Direction finalDirection)
-        {
-            //arrange
-            var rover = new Rover { Direction = initialDirection };
-            //act
-            rover.TurnRight();
-            //assert
-            Assert.AreEqual(finalDirection, rover.Direction);
-        }
-
     }
 
     /*

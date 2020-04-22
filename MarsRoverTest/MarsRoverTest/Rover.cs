@@ -77,7 +77,6 @@ namespace MarsRover
                 Direction = Direction.North;
             }
         }
-        //TODO: create a PR for when turning Right using paramatirized unit testing also do same thing for when turning left
 
     }
 }

@@ -76,6 +76,26 @@ namespace MarsRover
             {
                 Direction = Direction.North;
             }
+
+        }
+        public void TurnLeft()
+        {
+            if (Direction == Direction.North)
+            {
+                Direction = Direction.West;
+            }
+            else if (Direction == Direction.East)
+            {
+                Direction = Direction.North;
+            }
+            else if (Direction == Direction.South)
+            {
+                Direction = Direction.East;
+            }
+            else if (Direction == Direction.West)
+            {
+                Direction = Direction.South;
+            }
         }
 
     }

@@ -7,57 +7,57 @@ using System.Text;
 namespace MarsRoverTest.UnitTest.RoverTests
 {
     [TestClass]
-    public class WhenTurningRight
+    public class WhenTurningLeft
     {
         [TestMethod]
-        public void AndFacingNorthThenRoverFacesEast()
+        public void AndFacingNorthThenRoverFacesWest()
         {
             //arrange
             var rover = new Rover { Direction = Direction.North };
             //act
-            rover.TurnRight();
-            //assert
-            Assert.AreEqual(Direction.East, rover.Direction);
-        }
-
-        [TestMethod]
-        public void AndFacingEastThenRoverFacesSouth()
-        {
-            //arrange
-            var rover = new Rover { Direction = Direction.East };
-            //act
-            rover.TurnRight();
-            //assert
-            Assert.AreEqual(Direction.South, rover.Direction);
-        }
-
-        [TestMethod]
-        public void AndFacingSouthThenRoverFacesWest()
-        {
-            //arrange
-            var rover = new Rover { Direction = Direction.South };
-            //act
-            rover.TurnRight();
+            rover.TurnLeft();
             //assert
             Assert.AreEqual(Direction.West, rover.Direction);
         }
 
         [TestMethod]
-        public void AndFacingWestThenRoverFacesNorth()
+        public void AndFacingEastThenRoverFacesNorth()
         {
             //arrange
-            var rover = new Rover { Direction = Direction.West };
+            var rover = new Rover { Direction = Direction.East };
             //act
-            rover.TurnRight();
+            rover.TurnLeft();
             //assert
             Assert.AreEqual(Direction.North, rover.Direction);
         }
 
+        [TestMethod]
+        public void AndFacingSouthThenRoverFacesEast()
+        {
+            //arrange
+            var rover = new Rover { Direction = Direction.South };
+            //act
+            rover.TurnLeft();
+            //assert
+            Assert.AreEqual(Direction.East, rover.Direction);
+        }
+
+        [TestMethod]
+        public void AndFacingWestThenRoverFacesSouth()
+        {
+            //arrange
+            var rover = new Rover { Direction = Direction.West };
+            //act
+            rover.TurnLeft();
+            //assert
+            Assert.AreEqual(Direction.South, rover.Direction);
+        }
+
         [DataTestMethod]
-        [DataRow(DisplayName = "AndFacingNorthThenTheRoverFacesWest")]
-        [DataRow(DisplayName = "AndFacingEastThenTheRoverFacesNorth")]
-        [DataRow(DisplayName = "AndFacingSouthThenRoverFacesEast")]
-        [DataRow(DisplayName = "AndFacingWestThenRoverFacesSouth")]
+        [DataRow(DisplayName = "AndFacingNorthThenTheRoverFacesEast")]
+        [DataRow(DisplayName = "AndFacingEastThenTheRoverFacesSouth")]
+        [DataRow(DisplayName = "AndFacingSouthThenRoverFacesWest")]
+        [DataRow(DisplayName = "AndFacingWestThenRoverFacesNorth")]
         public void AndRoverFacesInitialDirectionThenRoverFacesFinalDirection(Direction initialDirection, Direction finalDirection)
         {
             //arrange

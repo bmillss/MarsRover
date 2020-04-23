@@ -54,12 +54,13 @@ namespace MarsRoverTest.UnitTest.RoverTests
         }
 
         [DataTestMethod]
-        [DataRow(DisplayName = "AndFacingNorthThenTheRoverFacesWest")]
-        [DataRow(DisplayName = "AndFacingEastThenTheRoverFacesNorth")]
-        [DataRow(DisplayName = "AndFacingSouthThenRoverFacesEast")]
-        [DataRow(DisplayName = "AndFacingWestThenRoverFacesSouth")]
+        [DataRow(Direction.North, Direction.East, DisplayName = "AndFacingNorthThenTheRoverFacesEast")]
+        [DataRow(Direction.East, Direction.South, DisplayName = "AndFacingEastThenTheRoverFacesSouth")]
+        [DataRow(Direction.South, Direction.West, DisplayName = "AndFacingSouthThenRoverFacesWest")]
+        [DataRow(Direction.West, Direction.North, DisplayName = "AndFacingWestThenRoverFacesNorth")]
         public void AndRoverFacesInitialDirectionThenRoverFacesFinalDirection(Direction initialDirection, Direction finalDirection)
         {
+            
             //arrange
             var rover = new Rover { Direction = initialDirection };
             //act
@@ -79,4 +80,3 @@ namespace MarsRoverTest.UnitTest.RoverTests
             - South -> West
             - West -> North
     */
-}

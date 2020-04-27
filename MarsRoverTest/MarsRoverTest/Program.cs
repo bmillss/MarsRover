@@ -15,7 +15,7 @@ namespace MarsRover
 
             Console.WriteLine("You inputed: " + userInput);
 
-            String direction;
+          /*  String direction;
             direction = userInput.ToUpper();
             switch (direction)
             {
